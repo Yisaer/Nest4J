@@ -182,3 +182,16 @@ public class Placement {
 
 ```
 
+### 参考论文
+
+- [López-Camacho *et al.* 2013](http://www.cs.stir.ac.uk/~goc/papers/EffectiveHueristic2DAOR2013.pdf)
+- [Kendall 2000](http://www.graham-kendall.com/papers/k2001.pdf)
+- [E.K. Burke *et al.* 2006](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.440.379&rep=rep1&type=pdf)
+
+## TODO
+
+1. 基于Java1.8进行语言层面的优化
+2. 进行多线程改造优化效率
+3. 改造NFP的缓存策略。
+4. 改造多边形的放大缩小计算效率。
+
