@@ -21,43 +21,7 @@ import java.util.List;
 
 
 public class NestTest {
-    @Test
-    public void startNestTest() throws Exception {
-        NestPath binPolygon = new NestPath();
-        binPolygon.add(0, 0);
-        binPolygon.add(550, 0);
-        binPolygon.add(550, 350);
-        binPolygon.add(0, 350);
-        binPolygon.bid = -1;
-
-        NestPath r1 = new NestPath();
-        r1.add(300, 600);
-        r1.add(300, 700);
-        r1.add(600, 700);
-        r1.add(600, 600);
-        r1.bid = 4;
-        r1.setRotation(0);
-        NestPath t1 = new NestPath();
-        t1.add(900, 0);
-        t1.add(900, 100);
-        t1.add(1000, 100);
-        t1.add(1000, 0);
-        t1.bid = 6;
-        t1.setRotation(0);
-        List<NestPath> list = new ArrayList<NestPath>();
-        list.add(r1);
-        list.add(t1);
-        Config config = new Config();
-        config.SPACING = 10;
-        config.POPULATION_SIZE = 5;
-        Nest nest = new Nest(binPolygon, list, config, 11);
-        List<List<Placement>> appliedPlacement = nest.startNest();
-        List<String> strings = SvgUtil.svgGenerator(list, appliedPlacement, 550, 350);
-        for (String s : strings) {
-            System.out.println(s);
-        }
-    }
-
+   
 
     @Test
     public void HoleTest() throws Exception {
