@@ -200,12 +200,10 @@ public class Nest {
         for(int i = 0 ; i< placelist.size();i++){
             NestPath part = placelist.get(i);
             key = new NfpKey(binPolygon .getId() , part.getId() , true , 0 , part.getRotation());
-//            String jsonKey = gson.toJson(key);
             nfpPairs.add(new NfpPair(binPolygon,part,key));
             for(int j = 0 ; j< i ; j ++){
                 NestPath placed = placelist.get(j);
                 NfpKey keyed = new NfpKey(placed.getId() , part.getId() , false , rotations.get(j), rotations.get(i));
-//                String jsonKeyed = gson.toJson(keyed);
                 nfpPairs.add( new NfpPair(placed , part , keyed));
             }
         }
@@ -221,6 +219,7 @@ public class Nest {
         }
         for(int i = 0 ; i<generatedNfp.size() ; i++){
             ParallelData Nfp = generatedNfp.get(i);
+            //TODO remove gson & generate a new key algorithm
             String tkey = gson.toJson(Nfp.getKey());
             nfpCache.put(tkey , Nfp.value);
         }
